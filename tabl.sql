@@ -24,4 +24,9 @@ create table if not exists curso(
 	cep varchar(50)
 );
 
+alter table eventos.curso add column certificado varchar(20);
+alter table eventos.curso add column carga_horaria varchar(50);
+alter table eventos.curso add column imagem varchar(200);
+
+
 select * from curso;
