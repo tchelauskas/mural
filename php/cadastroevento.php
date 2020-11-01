@@ -33,6 +33,10 @@
 		<input class="escondido" type="text" name="nomeCurso" id="nomeCurso">
 		
 
+	<label id="imagemlabel" class="escondido" for="imagem">Coloque uma imagem para o curso:</label>
+		<input class="escondido" type="text" id="imagem" name="imagem">
+		
+
 
 	
 	<label id="tipolabel" class="escondido" for="tipo">Qual categoria seu curso mais se enquadra: </label>
@@ -62,6 +66,21 @@
 
 	<label id="orgalabel" class="escondido" for="orga">Quem são os organizadores: </label>
 		<input class="escondido" type="text" name="orga" id="orga">
+
+	<label class="escondido" id="carga_horarialabel" for="carga_horaria" >Qual a carga horaria do curso: </label>
+		<div class="cert" >
+				<input class="escondido" type="number" name="carga_horaria" id="carga_horaria"><span class="escondido" id="span3">horas</span>
+		</div>
+
+	
+	<div class="cert" >
+		<label id="certificadolabel" class="escondido" for="certificado">O curso possui certificado: </label>
+
+			<input class="escondido" type="radio" name="certificado" id="sim" value="sim"><span class="escondido" id="span1">Sim</span>
+
+			<input class="escondido" type="radio" name="certificado" id="nao" value="nao"><span class="escondido" id="span2">Não</span>
+	</div>
+	
 
 
 	<label id="linlabel" class="escondido" for="lin">Compartilhe o link de onde acontecerá seu evento online: </label>
