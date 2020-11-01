@@ -1,0 +1,11 @@
+.escondido{
+    display: none;
+}
+form{
+    display:flex-column;
+    justify-content: space-between;
+}
+
+input, select, textarea, label{
+    margin-bottom: 20px;
+}
