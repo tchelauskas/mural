@@ -1,4 +1,5 @@
 <?php
+    //lucas
     require_once("../conexoes/conexao.php");
 
     $_POST['imagem'];

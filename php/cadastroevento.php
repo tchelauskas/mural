@@ -1,5 +1,7 @@
 
-<?php include_once('../inserts/head.php'); ?>
+<?php 
+//lucas
+include_once('../inserts/head.php'); ?>
 
 <script async src="../js/scriptcadastro.js"></script>
 <link rel="stylesheet" type="text/css" href="../css/estilocadastro.css">

@@ -1,4 +1,4 @@
-
+//lucas
 let nomeCurso         = window.document.getElementById("nomeCurso");
 let tipo              = window.document.getElementById("tipo");
 let data              = window.document.getElementById("data");
