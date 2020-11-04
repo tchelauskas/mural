@@ -15,16 +15,8 @@
 </head>
 <body class="container">
     <?php
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $database = "projeto_mural";
-
-        $conn = mysqli_connect($servername, $username, $password, $database);
-
-        if(!$conn){
-            die("A conexão com o banco de dados falhou: " .mysqli_connect_error());
-        }
+    
+        require_once("../conexoes/conexao.php");
 
         if(isset($_POST["nome"]) && isset($_POST["nome_usuario"]) && isset($_POST["nascimento"])
         && isset($_POST["genero"]) && isset($_POST["telefone"]) && isset($_POST["email"])
@@ -37,20 +29,22 @@
                 $email = $_POST["email"];
                 $senha = $_POST["senha"];
 
-                $sql = "insert into cadastro (nome, nome_usuario, nascimento, genero, telefone, email, senha)
+                $sql = "insert into cadastro_usuario (nome, nome_usuario, nascimento, genero, telefone, email, senha)
                 values ('$nome', '$nome_usuario', '$nascimento', '$genero', '$telefone', '$email', '$senha')";
-                $result = $conn->query($sql);
-                $show = "select * from cadastro";
-                $showResult = $conn->query($show);
+                $result = $conexao->query($sql);
+                $show = "select * from cadastro_usuario";
+                $showResult = $conexao->query($show);
                 
 
             }else{
-                $show = "select * from cadastro";
-                $showResult = $conn->query($show);
+                $show = "select * from cadastro_usuario";
+                $showResult = $conexao->query($show);
             }
+    
+    mysqli_close($conexao)
 
     ?>
-    <?php while($row = $showResult->fetch_assoc()){?>
+    <?php while($row = $showResult->fetch_assoc()){ ?>
     <div class="table-responsive">
         <table class="mt-5 table table-striped table-bordered table-responsive">
             <tr>
