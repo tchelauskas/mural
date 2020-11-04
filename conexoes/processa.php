@@ -18,7 +18,7 @@
         $servername = "localhost";
         $username = "root";
         $password = "";
-        $database = "projeto_mural";
+        $database = "eventos";
 
         $conn = mysqli_connect($servername, $username, $password, $database);
 
@@ -37,20 +37,22 @@
                 $email = $_POST["email"];
                 $senha = $_POST["senha"];
 
-                $sql = "insert into cadastro (nome, nome_usuario, nascimento, genero, telefone, email, senha)
+                $sql = "insert into cadastroUsuario (nome, nome_usuario, nascimento, genero, telefone, email, senha)
                 values ('$nome', '$nome_usuario', '$nascimento', '$genero', '$telefone', '$email', '$senha')";
                 $result = $conn->query($sql);
-                $show = "select * from cadastro";
+                $show = "select * from cadastroUsuario";
                 $showResult = $conn->query($show);
                 
 
             }else{
-                $show = "select * from cadastro";
+                $show = "select * from cadastroUsuario";
                 $showResult = $conn->query($show);
             }
+    
+    mysqli_close($conn)
 
     ?>
-    <?php while($row = $showResult->fetch_assoc()){?>
+    <?php while($row = $showResult->fetch_assoc()){ ?>
     <div class="table-responsive">
         <table class="mt-5 table table-striped table-bordered table-responsive">
             <tr>
