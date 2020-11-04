@@ -18,7 +18,7 @@
         $servername = "localhost";
         $username = "root";
         $password = "";
-        $database = "eventos";
+        $database = "mural";
 
         $conn = mysqli_connect($servername, $username, $password, $database);
 
@@ -37,15 +37,15 @@
                 $email = $_POST["email"];
                 $senha = $_POST["senha"];
 
-                $sql = "insert into cadastroUsuario (nome, nome_usuario, nascimento, genero, telefone, email, senha)
+                $sql = "insert into cadastro_usuario (nome, nome_usuario, nascimento, genero, telefone, email, senha)
                 values ('$nome', '$nome_usuario', '$nascimento', '$genero', '$telefone', '$email', '$senha')";
                 $result = $conn->query($sql);
-                $show = "select * from cadastroUsuario";
+                $show = "select * from cadastro_usuario";
                 $showResult = $conn->query($show);
                 
 
             }else{
-                $show = "select * from cadastroUsuario";
+                $show = "select * from cadastro_usuario";
                 $showResult = $conn->query($show);
             }
     
