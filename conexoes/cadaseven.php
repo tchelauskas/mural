@@ -1,5 +1,5 @@
 <?php
-    //lucas
+    
     require_once("../conexoes/conexao.php");
 
     
@@ -54,13 +54,14 @@
 
         if($res){
             echo "Dados inseridos com sucesso!";
-            header('refresh: 3 ; ../php/cadastroevento.php');
+            header('refresh: 2 ; ../php/eventos.php');
         } else {
             echo "Erro no envio de dados";
         }
 
     } else {
-        echo "Não foi enviado nenhum dado";
+        echo "Formulario incompleto<br>
+        <button><a href='../php/cadastroevento.php'>Voltar</a></button>";
     }
 
 mysqli_close($conexao)

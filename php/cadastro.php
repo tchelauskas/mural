@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="PT-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        
+<?php 
+include_once('../inserts/head.php'); 
+?>
         <link rel="stylesheet" href="./bootstrap-4.5.3-dist/css/bootstrap.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.js" integrity="sha512-1lagjLfnC1I0iqH9plHYIUq3vDMfjhZsLy9elfK89RBcpcRcx4l+kRJBSnHh2Mh6kLxRHoObD1M5UTUbgFy6nA==" crossorigin="anonymous"></script>
     <!--    <script src="./bootstrap-4.5.3-dist/js/bootstrap.min.js"></script> -->
@@ -14,13 +10,11 @@
         <title>PostEduc | Cadastro</title>
 
 
-    </head>
-    <body>
-        <header>
-            <?php 
-            include_once('../inserts/head.php');
-            ?>
-        </header>
+    
+        <?php 
+        include_once('../inserts/menu.php');
+        ?>
+        
 
         <div class="container">
             <div class="col-md-5 mx-auto jumbotron bg-second">

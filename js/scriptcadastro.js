@@ -1,4 +1,6 @@
-//lucas
+
+
+// aqui fazemos a coleta de todos os campos para selecionar quem vai aparecer
 let nomeCurso         = window.document.getElementById("nomeCurso");
 let tipo              = window.document.getElementById("tipo");
 let data              = window.document.getElementById("data");
@@ -20,7 +22,6 @@ let nao               = window.document.getElementById("nao");
 let span1             = window.document.getElementById("span1");
 let span2             = window.document.getElementById("span2");
 let botao             = window.document.getElementById("botao");
-let span3             = window.document.getElementById("span3");
 let imagem            = window.document.getElementById("imagem");
 let nomeCursolabel    = window.document.getElementById("nomeCursolabel");
 let tipolabel         = window.document.getElementById("tipolabel");
@@ -41,10 +42,20 @@ let certificadolabel  = window.document.getElementById("certificadolabel");
 let cargahorarialabel = window.document.getElementById("carga_horarialabel");
 let imagemlabel       = window.document.getElementById("imagemlabel");
 
-let variaveis = [nomeCurso,tipo,data,hora,orga,lin,cep,pais,estado,cidade,bairro,rua,num,comple,descricao,botao,sim,nao,span1,span2,span3,cargahoraria,imagem,nomeCursolabel,tipolabel,datalabel,horalabel,orgalabel,linlabel,ceplabel,paislabel,estadolabel,cidadelabel,bairrolabel,rualabel,numlabel,complelabel,descricaolabel,cargahorarialabel,certificadolabel,imagemlabel];
+//aqui colocamos todas as variaveis em um array para poder varrer elas nas funçoes
+
+let variaveis = [nomeCurso,tipo,data,hora,orga,lin,cep,pais,estado,cidade,
+    bairro,rua,num,comple,descricao,botao,sim,nao,span1,span2,cargahoraria,
+    imagem,nomeCursolabel,tipolabel,datalabel,horalabel,orgalabel,linlabel,
+    ceplabel,paislabel,estadolabel,cidadelabel,bairrolabel,rualabel,numlabel,
+    complelabel,descricaolabel,cargahorarialabel,certificadolabel,imagemlabel];
+
+
+
 
 function pre(){
-        //presencial
+    // nessa funçao só mostramos os campos necessarios para aulas PRESENCIAIS
+    
     for(let i = 0 ; i < variaveis.length ; i++){
         if(variaveis[i] == lin || variaveis[i] == linlabel){
             variaveis[i].style = "display:none";
@@ -54,8 +65,10 @@ function pre(){
     }
 }
 
+
+
 function on(){
-    //online
+    // nessa funçao só mostramos os campos necessarios para aulas ONLINE
 
     for(let i = 0 ; i < variaveis.length ; i++){
         if(variaveis[i] == cep || variaveis[i] == ceplabel || variaveis[i] == pais || variaveis[i] == paislabel || variaveis[i] == estado || variaveis[i] == estadolabel || variaveis[i] == cidade || variaveis[i] == cidadelabel || variaveis[i] == bairro || variaveis[i] == bairrolabel || variaveis[i] == rua || variaveis[i] == rualabel || variaveis[i] == num || variaveis[i] == numlabel || variaveis[i] == comple || variaveis[i] == complelabel ){
@@ -66,13 +79,13 @@ function on(){
     }
 }
 
+
+
 function semi(){
-    //semipresencial
+    // nessa funçao só mostramos os campos necessarios para aulas SEMIPRESENCIAL
   
     for(let i = 0 ; i < variaveis.length ; i++){
         variaveis[i].style = "display:block"
     }
-
 }
-
  
