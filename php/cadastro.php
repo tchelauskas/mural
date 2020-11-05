@@ -23,7 +23,7 @@
         </header>
 
         <div class="container">
-            <div class="col-md-5 mt-5 jumbotron bg-second">
+            <div class="col-md-5 mx-auto jumbotron bg-second">
                 <h2>Seja Bem-vindo, Faça Aqui seu Cadastro</h2>
                 <hr>
 
@@ -62,7 +62,7 @@
                         <input class="form-control" type="password" name="senha" id="senha" onkeyup="valida_campos()">
                     </div>
                     
-                    <button type="submit" name="cadastrar" class="btn btn-success mb-4" id="cadastrar-usuarios">Cadastrar</button>    
+                    <button type="submit" name="cadastrar" class="btn btn-success" id="cadastrar-usuarios">Cadastrar</button>    
                     <a href="telaLogin.php" name="voltar" class="btn btn-secondary"> Voltar </a>
 
                  </form>
