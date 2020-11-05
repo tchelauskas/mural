@@ -12,8 +12,6 @@ include_once('../inserts/head.php'); ?>
 	$data = new DateTime();
 ?>
 
-
-
 <form action="../conexoes/cadaseven.php" enctype="multipart/form-data" method="post" >
 	<input type="hidden" name="criador" value="<?php  echo "Lucas";?>">
 	<input type="hidden" name="data_postagem" value="<?php echo $data -> format('Y-m-d'); ?>">
