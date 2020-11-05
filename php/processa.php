@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Processa</title>
+    <title>PostEduc | Seu divulgador de eventos educacionais </title>
 
     <link rel="stylesheet" href="./bootstrap-4.5.3-dist/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.js" integrity="sha512-1lagjLfnC1I0iqH9plHYIUq3vDMfjhZsLy9elfK89RBcpcRcx4l+kRJBSnHh2Mh6kLxRHoObD1M5UTUbgFy6nA==" crossorigin="anonymous"></script>
@@ -77,7 +77,6 @@
             
         </table>
     <?php } ?>
-
         <a href="cadastro.php"><button class="mb-5 btn btn-primary btn=lg">Voltar a Tela de Cadastro</button></a>
     </div>
 </body>

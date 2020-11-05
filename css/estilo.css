@@ -1,0 +1,39 @@
+#logo{
+    margin: 0px;
+    padding: 1px;
+}
+
+/**.row{
+    background-color: #b9a3ed;
+}*/
+
+
+.label-form {
+    font-size: 14pt;
+    color: #504456;
+}
+
+.container-login{
+    margin-top: 25px;
+    margin-bottom: 45px;
+    border: 1px solid #71a5ca;
+    background-color: #e0ebf3; 
+}
+
+.mb-4{
+    color: #0068c8;
+    font-weight: bolder;
+    text-align: center;    
+}
+
+#cadastrar-divulgadores{
+    visibility: hidden;
+}
+
+footer {
+    margin: auto;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
+

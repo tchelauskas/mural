@@ -1,18 +1,18 @@
-
 <?php 
 //lucas
 include_once('../inserts/head.php'); ?>
 
 <script async src="../js/scriptcadastro.js"></script>
 <link rel="stylesheet" type="text/css" href="../css/estilocadastro.css">
-<title>cadastro-evento</title>
+<title>PostEduc | Seu divulgador de eventos educacionais </title>
 </head>
 <body>
 <?php 
 	$data = new DateTime();
 ?>
 
-<form action="../conexoes/cadaseven.php" enctype="multipart/form-data" method="post" >
+<div class="conteiner">
+<form action="../conexoes/cadaseven.php" enctype="multipart/form-data" method="post" class="cdevento">
 	<input type="hidden" name="criador" value="<?php  echo "Lucas";?>">
 	<input type="hidden" name="data_postagem" value="<?php echo $data -> format('Y-m-d'); ?>">
 	<input type="hidden" name="hora_postagem" value="<?php echo $data -> format('H:i:s') ;?>">
@@ -130,7 +130,7 @@ include_once('../inserts/head.php'); ?>
 <button class="escondido" type="submit" id="botao"> Enviar </button>
 
 </form>
-
+</div>
 
 
 <?php include_once('../inserts/footer.php');?>

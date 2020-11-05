@@ -72,5 +72,7 @@ function semi(){
     for(let i = 0 ; i < variaveis.length ; i++){
         variaveis[i].style = "display:block"
     }
+
 }
+
  

@@ -1,6 +1,20 @@
+.cdevento{
+    padding-left: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border: 1px solid #71a5ca;
+    background-color: #e0ebf3; 
+}
+
+.col-md-5 mt-5 jumbotron bg-second{
+    display: inline-block;
+    
+}
+
 .escondido{
     display: none;
 }
+
 form{
     display:flex-column;
     justify-content: space-between;
@@ -18,4 +32,15 @@ input, select, textarea, label{
 .cert{
     display: flex;
     
+}
+
+#cadastrar-usuarios {
+    visibility: hidden;
+}
+
+footer {
+    margin: auto;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
 }
