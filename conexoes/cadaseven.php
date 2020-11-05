@@ -49,14 +49,14 @@
         $res = mysqli_query($conexao,$sqlInsert);
 
         if($res){
-            echo "dados inseridos com sucesso!";
+            echo "Dados inseridos com sucesso!";
         } else {
-            echo "erro no envio de dados";
+            echo "Erro no envio de dados";
         }
 
     } else {
         echo "Não foi enviado nenhum dado";
     }
 
-mysqli_close()
+mysqli_close($conexao)
 ?>

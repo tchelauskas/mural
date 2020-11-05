@@ -2,8 +2,8 @@
     //lucas
     $servidor = 'localhost';
     $usuario  = 'root';
-    $senha    = 'root';
-    $banco    = 'eventos';
+    $senha    = '';
+    $banco    = 'mural';
 
     $conexao = mysqli_connect($servidor, $usuario, $senha, $banco);
 
