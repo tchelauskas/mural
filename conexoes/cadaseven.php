@@ -1,21 +1,26 @@
 <?php
+    //lucas
     require_once("../conexoes/conexao.php");
 
-    $_POST['imagem'];
+    
 
     if(
     //presencial    
-    isset($_POST['criador']) && isset($_POST['data_postagem']) && isset($_POST['hora_postagem']) && isset($_POST['modalidade']) && isset($_POST['nomeCurso']) && isset($_POST['tipo']) && isset($_POST['data']) && isset($_POST['hora']) && isset($_POST['orga']) && isset($_POST['cep']) && isset($_POST['pais']) && isset($_POST['estado'])&& isset($_POST['cidade']) && isset($_POST['bairro']) && isset($_POST['rua']) && isset($_POST['num']) && isset($_POST['comple']) && isset($_POST['descricao'])&& isset($_POST['carga_horaria']) && isset($_POST['certificado']) && isset($_POST['imagem']) 
+    isset($_POST['criador']) && isset($_POST['data_postagem']) && isset($_POST['hora_postagem']) && isset($_POST['modalidade']) && isset($_POST['nomeCurso']) && isset($_POST['tipo']) && isset($_POST['data']) && isset($_POST['hora']) && isset($_POST['orga']) && isset($_POST['cep']) && isset($_POST['pais']) && isset($_POST['estado'])&& isset($_POST['cidade']) && isset($_POST['bairro']) && isset($_POST['rua']) && isset($_POST['num']) && isset($_POST['comple']) && isset($_POST['descricao'])&& isset($_POST['carga_horaria']) && isset($_POST['certificado']) 
     
     or 
     //online
-    isset($_POST['criador']) && isset($_POST['data_postagem']) && isset($_POST['hora_postagem']) && isset($_POST['modalidade']) && isset($_POST['nomeCurso']) && isset($_POST['tipo']) && isset($_POST['data']) && isset($_POST['hora']) && isset($_POST['orga']) && isset($_POST['lin']) && isset($_POST['descricao'])&& isset($_POST['carga_horaria']) && isset($_POST['certificado']) && isset($_POST['imagem']) 
+    isset($_POST['criador']) && isset($_POST['data_postagem']) && isset($_POST['hora_postagem']) && isset($_POST['modalidade']) && isset($_POST['nomeCurso']) && isset($_POST['tipo']) && isset($_POST['data']) && isset($_POST['hora']) && isset($_POST['orga']) && isset($_POST['lin']) && isset($_POST['descricao'])&& isset($_POST['carga_horaria']) && isset($_POST['certificado'])
 
     or
     //semipresencial
-    isset($_POST['criador']) && isset($_POST['data_postagem']) && isset($_POST['hora_postagem']) && isset($_POST['modalidade']) && isset($_POST['nomeCurso']) && isset($_POST['tipo']) && isset($_POST['data']) && isset($_POST['hora']) && isset($_POST['orga']) && isset($_POST['lin']) && isset($_POST['cep']) && isset($_POST['pais']) && isset($_POST['estado'])&& isset($_POST['cidade']) && isset($_POST['bairro']) && isset($_POST['rua']) && isset($_POST['num']) && isset($_POST['comple']) && isset($_POST['descricao'])&& isset($_POST['carga_horaria']) && isset($_POST['certificado']) && isset($_POST['imagem'])
+    isset($_POST['criador']) && isset($_POST['data_postagem']) && isset($_POST['hora_postagem']) && isset($_POST['modalidade']) && isset($_POST['nomeCurso']) && isset($_POST['tipo']) && isset($_POST['data']) && isset($_POST['hora']) && isset($_POST['orga']) && isset($_POST['lin']) && isset($_POST['cep']) && isset($_POST['pais']) && isset($_POST['estado'])&& isset($_POST['cidade']) && isset($_POST['bairro']) && isset($_POST['rua']) && isset($_POST['num']) && isset($_POST['comple']) && isset($_POST['descricao'])&& isset($_POST['carga_horaria']) && isset($_POST['certificado'])
     )
     {
+        $nome_imagem = $_FILES['imagem']['name'];
+        $temp_file = $_FILES['imagem']['tmp_name'];
+        $destino = "../img/$nome_imagem";
+        move_uploaded_file($temp_file,$destino);
 
         $criador       = $_POST['criador'];
         $data_postagem = $_POST['data_postagem'];
@@ -39,16 +44,17 @@
 
         $cargahoraria  = $_POST['carga_horaria'];
         $certificado   = $_POST['certificado'];
-        $imagem        = $_POST['imagem'];
+        
 
         
     
-        $sqlInsert = "INSERT INTO curso(presencial,nome,tipo,data_postagem,hora_postagem,data_curso,hora_curso,criador,organizadores,descricao,link,pais,estado,cidade,bairro,rua,numero,complemento,cep,certificado,carga_horaria,imagem) VALUES ('$presencial','$nome_curso','$tipo','$data_postagem','$hora_postagem','$data_curso','$hora_curso','$criador','$organizadores','$descricao','$link','$pais','$estado','$cidade','$bairro','$rua','$numero','$complemento','$cep','$certificado','$cargahoraria','$imagem'); ";
+        $sqlInsert = "INSERT INTO curso(presencial,nome,tipo,data_postagem,hora_postagem,data_curso,hora_curso,criador,organizadores,descricao,link,pais,estado,cidade,bairro,rua,numero,complemento,cep,certificado,carga_horaria,imagem) VALUES ('$presencial','$nome_curso','$tipo','$data_postagem','$hora_postagem','$data_curso','$hora_curso','$criador','$organizadores','$descricao','$link','$pais','$estado','$cidade','$bairro','$rua','$numero','$complemento','$cep','$certificado','$cargahoraria','../img/$nome_imagem'); ";
 
         $res = mysqli_query($conexao,$sqlInsert);
 
         if($res){
             echo "Dados inseridos com sucesso!";
+            header('refresh: 3 ; ../php/cadastroevento.php');
         } else {
             echo "Erro no envio de dados";
         }

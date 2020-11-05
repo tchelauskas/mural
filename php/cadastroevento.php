@@ -1,5 +1,7 @@
 
-<?php include_once('../inserts/head.php'); ?>
+<?php 
+//lucas
+include_once('../inserts/head.php'); ?>
 
 <script async src="../js/scriptcadastro.js"></script>
 <link rel="stylesheet" type="text/css" href="../css/estilocadastro.css">
@@ -10,9 +12,7 @@
 	$data = new DateTime();
 ?>
 
-
-
-<form action="../conexoes/cadaseven.php" method="post">
+<form action="../conexoes/cadaseven.php" enctype="multipart/form-data" method="post" >
 	<input type="hidden" name="criador" value="<?php  echo "Lucas";?>">
 	<input type="hidden" name="data_postagem" value="<?php echo $data -> format('Y-m-d'); ?>">
 	<input type="hidden" name="hora_postagem" value="<?php echo $data -> format('H:i:s') ;?>">
@@ -34,7 +34,7 @@
 		
 
 	<label id="imagemlabel" class="escondido" for="imagem">Coloque uma imagem para o curso:</label>
-		<input class="escondido" type="text" id="imagem" name="imagem">
+		<input class="escondido" type="file" id="imagem" name="imagem">
 		
 
 
