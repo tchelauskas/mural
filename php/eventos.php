@@ -3,10 +3,11 @@
 
 </head>
 <body>
-<?php include_once('../inserts/menu.php');?>
 
-<a href="../php/cadastroevento.php"> volta la que deu ruim</a>
-<br>
+<?php include_once('../inserts/menu.php');?>
+<div class="container-fluid">
+<div class="row mt-1" style=" background-color: #5044567e;">
+
 
 <?php 
     $sql_select = "SELECT * FROM curso";
@@ -70,6 +71,7 @@
         }
     */
         while($row = mysqli_fetch_assoc($resposta)){
+            /* 
            echo $row['id_curso'];
            echo "<br>";
            echo $row['presencial'];
@@ -118,19 +120,48 @@
 
            echo "<br><br><br><br>";
 
-        
+        */
     
 ?>
+            
+            <div class=" col-3 mt-4 text-center">
+                <p style="color:#504456" class="font-weight-bold"><?php echo $row['presencial'];?></p>
+                <a href=".//php?evento=<?php echo $row['id_curso'];?>"><img src="<?php echo $row['imagem'];?>" alt="imagem" width="230px" height="170px"></a>
+                <p class="font-weight-bold mt-2" ><?php echo $row['nome'];?></p>
+            </div>
+           
 
-<img src="<?php echo $row['imagem']?>" alt="">
-<br>
-
-    
+  
     <?php
+        
         }
+        
+        ?>
+        </div>
+
+
+
+
+
+        <?php
     } else {
-        echo "deu bom nao ein";
+        echo "Erro ao carregar os eventos tente novamente!
+        <br>
+        <button><a href='./index.php'>Voltar</a></button>";
     }
     ?>
 
-<?php include_once('../inserts/footer.php');?>
+
+
+    
+</div>
+   <!-- Inicio do Footer -->
+   <footer class="page-footer mt-1 font-small text-white-50 bg-dark" style="position:relative;">
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3" style="background-color: #504456">PostEduc © 2020 - Todos os direitos reservados</div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Fim do Footer -->
+
+</body>
+</html>

@@ -2,7 +2,7 @@
     //lucas
     $servidor = 'localhost';
     $usuario  = 'root';
-    $senha    = '';
+    $senha    = 'root';
     $banco    = 'mural';
 
     $conexao = mysqli_connect($servidor, $usuario, $senha, $banco);
