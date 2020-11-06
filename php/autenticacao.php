@@ -25,7 +25,7 @@
 
     if($row ==1) {
         $_SESSION['nome_usuario'] = $nome_usuario;
-        header('Location: ../php/cadastroevento.php');
+        header('Location: ../php/eventos.php');
         exit();
 
     } else {
