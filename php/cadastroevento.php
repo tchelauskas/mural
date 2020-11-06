@@ -90,7 +90,7 @@ include_once('../inserts/head.php');
 				<div class="form-row col-8 mr-5">
 					<label class="escondido mr-5" for="certificado" id="span1"><input class="escondido " type="radio" name="certificado" id="sim" value="sim">Sim</label>
 
-					<label class="escondido" for="certificado" id="span2"><input class="escondido " type="radio" name="certificado" id="nao" value="nao">Não</label>
+					<label class="escondido" for="certificado" id="span2"><input class="escondido " type="radio" name="certificado" id="nao" value="não">Não</label>
 				</div>
 			</div>
 		</div>	
@@ -171,7 +171,7 @@ include_once('../inserts/head.php');
 
 	<div class="form-row ">
 		<label id="descricaolabel" class="escondido" for="descricao"> Descreva sua atividade: </label>
-			<textarea class="escondido form-control" name="descricao" id="descricao" cols="30" rows="10"></textarea>
+			<textarea class="escondido form-control" name="descricao" id="descricao" cols="5" rows="10"></textarea>
 	</div>
 
 
