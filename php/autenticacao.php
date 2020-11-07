@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require_once("../conexoes/conexao.php");
 
     
@@ -24,11 +25,11 @@
     }
 
     if($row ==1) {
-        $_SESSION['nome_usuario'] = $nome_usuario;
-        header('Location: ../php/eventos.php');
+        $_SESSION['nome_usuario'] = $nome_usuario;  
+        header('Location: cadastroevento.php');
         exit();
 
-    } else {
+    }  else {
         echo "<strong>Nome de usuário e/ou senha inválidos</strong>";
         echo "<a href='telaLogin.php'><br><button>Voltar</button></a>";
         exit();                  
